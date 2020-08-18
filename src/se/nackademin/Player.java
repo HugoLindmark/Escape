@@ -27,19 +27,19 @@ public class Player {
     }
 
     public void movePlayer(String input) {
-        if (input == "S") {
+        if (input.equals("S")) {
             int newRow = position.getRow();
             newRow++;
             position.setRow(newRow);
-        } else if (input == "W") {
+        } else if (input.equals("W")) {
             int newRow = position.getRow();
             newRow--;
             position.setRow(newRow);
-        } else if (input == "D") {
+        } else if (input.equals("D")) {
             int newCol = position.getCol();
             newCol++;
             position.setCol(newCol);
-        } else if (input == "A") {
+        } else if (input.equals("A")) {
             int newCol = position.getCol();
             newCol--;
             position.setCol(newCol);

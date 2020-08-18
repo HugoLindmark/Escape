@@ -4,18 +4,15 @@ import java.util.Random;
 
 public class Position {
 
-
     private int col;
     private int row;
-    Player player = new Player();
-
 
     public Position() {
     }
 
-    public Position(int col, int row) {
-        this.col = col;
+    public Position(int row, int col) {
         this.row = row;
+        this.col = col;
     }
 
     public int getCol() {
@@ -44,9 +41,8 @@ public class Position {
     @Override
     public String toString() {
         return "Position{" +
-                "col=" + col +
-                ", row=" + row +
+                "row=" + row +
+                ", col=" + col +
                 '}';
     }
-
 }
