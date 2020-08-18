@@ -6,7 +6,7 @@ public class Player {
     private boolean hasKey;
 
     public Player() {
-        this.position = new Position(0,0);
+        this.position = new Position(0, 0);
         this.hasKey = false;
     }
 
@@ -24,5 +24,25 @@ public class Player {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    public void movePlayer(String input) {
+        if (input == "S") {
+            int newRow = position.getRow();
+            newRow++;
+            position.setRow(newRow);
+        } else if (input == "W") {
+            int newRow = position.getRow();
+            newRow--;
+            position.setRow(newRow);
+        } else if (input == "D") {
+            int newCol = position.getCol();
+            newCol++;
+            position.setCol(newCol);
+        } else if (input == "A") {
+            int newCol = position.getCol();
+            newCol--;
+            position.setCol(newCol);
+        }
     }
 }

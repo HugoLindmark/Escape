@@ -4,8 +4,11 @@ import java.util.Random;
 
 public class Position {
 
+
     private int col;
     private int row;
+    Player player = new Player();
+
 
     public Position() {
     }
@@ -45,4 +48,5 @@ public class Position {
                 ", row=" + row +
                 '}';
     }
+
 }
