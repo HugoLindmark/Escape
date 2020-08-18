@@ -12,6 +12,7 @@ public class View {
             System.out.println("How do ya wanna move?");
             Scanner scan = new Scanner(System.in);
             String input = scan.nextLine();
+            gameBoard.checkPosition(input);
             gameBoard.movePlayer(input);
 
             gameBoard.gameBoard();

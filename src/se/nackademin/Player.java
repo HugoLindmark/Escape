@@ -27,22 +27,34 @@ public class Player {
     }
 
     public void movePlayer(String input) {
-        if (input.equals("S")) {
+        if (input.equals("S") && position.getRow() != 9) {
             int newRow = position.getRow();
             newRow++;
             position.setRow(newRow);
-        } else if (input.equals("W")) {
+        } else if (input.equals("W") && position.getRow() != 0) {
             int newRow = position.getRow();
             newRow--;
             position.setRow(newRow);
-        } else if (input.equals("D")) {
+        } else if (input.equals("D") && position.getCol() != 9) {
             int newCol = position.getCol();
             newCol++;
             position.setCol(newCol);
-        } else if (input.equals("A")) {
+        } else if (input.equals("A") && position.getCol() != 0) {
             int newCol = position.getCol();
             newCol--;
             position.setCol(newCol);
+        }
+    }
+
+    public void checkBoundaries(String input) {
+        if (input.equals("S") && position.getRow() == 9) {
+            System.out.println("You can't go farther down, try another direction");
+        } else if (input.equals("W") && position.getRow() == 0) {
+            System.out.println("You can't go farther up, try another direction");
+        } else if (input.equals("D") && position.getCol() == 9) {
+            System.out.println("You can't go farther right, try another direction");
+        } else if (input.equals("A") && position.getCol() == 0) {
+            System.out.println("You can't go farther left, try another direction");
         }
     }
 }

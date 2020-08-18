@@ -29,4 +29,8 @@ public class GameBoard {
         player.movePlayer(input);
         //System.out.println(player.getPosition());
     }
+
+    public void checkPosition(String input) {
+        player.checkBoundaries(input);
+    }
 }
