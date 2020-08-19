@@ -69,6 +69,7 @@ public class GameBoard {
 
     public void checkIfPlayerCanOpenDoor() {
         if (player.hasKey() && player.getPosition().comparePosition(door.getPosition())) {
+            gameBoard();
             System.out.println("CONGRATULATONS!");
             System.out.println("You have escaped the maze, legends will be foretold regarding thou accomplishments.");
             System.out.println("Pls send money to our Patreon: Patreeon.con/TotallyNotATrojan.exe");
