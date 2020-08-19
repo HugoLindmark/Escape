@@ -38,6 +38,12 @@ public class Position {
         return new Position(col, row);
     }
 
+    public boolean comparePosition(Position position){
+
+        return this.col == position.col && this.row == position.row;
+
+    }
+
     @Override
     public String toString() {
         return "Position{" +

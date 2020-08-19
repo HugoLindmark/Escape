@@ -7,6 +7,7 @@ public class View {
 
     public void Start() {
         gameBoard.gameBoard();
+        gameBoard.checkIfPlayerHasFoundKey();
 
         while (true) {
             System.out.println("How do ya wanna move?");

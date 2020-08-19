@@ -1,5 +1,7 @@
 package se.nackademin;
 
+import java.nio.channels.Pipe;
+
 public class GameBoard {
 
     private int[][] tiles = new int[10][10];
@@ -32,5 +34,11 @@ public class GameBoard {
 
     public void checkPosition(String input) {
         player.checkBoundaries(input);
+    }
+
+    public void checkIfPlayerHasFoundKey(){
+        if(player.getPosition().comparePosition(key.getPosition()) ){
+            player.setHasKey(true);
+        }
     }
 }
