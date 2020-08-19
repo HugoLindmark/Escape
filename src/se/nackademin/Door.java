@@ -7,7 +7,7 @@ public class Door {
 
     public Door(Position position) {
         this.position = position;
-        this.visible = false;
+        this.visible = true;
     }
 
     public boolean isVisible() {

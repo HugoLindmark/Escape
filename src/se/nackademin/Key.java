@@ -7,7 +7,7 @@ public class Key {
 
     public Key(Position position) {
         this.position = position;
-        this.visible = false;
+        this.visible = true;
     }
 
     public boolean isVisible() {

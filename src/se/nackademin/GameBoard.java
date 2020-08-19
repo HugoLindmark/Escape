@@ -1,7 +1,5 @@
 package se.nackademin;
 
-import java.nio.channels.Pipe;
-
 public class GameBoard {
 
     private int[][] tiles = new int[10][10];
@@ -30,16 +28,31 @@ public class GameBoard {
     public void movePlayer(String input) {
         player.movePlayer(input);
         checkIfPlayerHasFoundKey();
+        checkIfPlayerCanOpenDoor();
     }
 
     public void checkPosition(String input) {
         player.checkBoundaries(input);
     }
 
-    public void checkIfPlayerHasFoundKey(){
-        if(player.getPosition().comparePosition(key.getPosition()) ){
+    public void checkIfPlayerHasFoundKey() {
+        if (player.getPosition().comparePosition(key.getPosition())) {
             player.setHasKey(true);
-            System.out.println("has found the key");
+            key.setVisible(true);
+            System.out.println("YOU HAVE FOUND THE KEY!");
+        }
+    }
+
+    public void checkIfPlayerCanOpenDoor() {
+        if (player.hasKey() && player.getPosition().comparePosition(door.getPosition())) {
+            System.out.println("CONGRATULATONS!");
+            System.out.println("You have escaped the maze, legends will be foretold regarding thou accomplishments.");
+            System.out.println("Pls send money to our Patreon: Patreeon.con/TotallyNotATrojan.exe");
+            System.exit(0);
+        } else if (!player.hasKey() && player.getPosition().comparePosition(door.getPosition())){
+            door.setVisible(true);
+            System.out.println("You have found the door, but alas thou don't have thee key!");
+            System.out.println("Keep searching, we believe in you!");
         }
     }
 }
