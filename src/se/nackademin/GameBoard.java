@@ -7,6 +7,30 @@ public class GameBoard {
     private Key key = new Key(Position.randomizePosition());
     private Door door = new Door(Position.randomizePosition(key.getPosition()));
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Key getKey() {
+        return key;
+    }
+
+    public void setKey(Key key) {
+        this.key = key;
+    }
+
+    public Door getDoor() {
+        return door;
+    }
+
+    public void setDoor(Door door) {
+        this.door = door;
+    }
+
     public void gameBoard() {
         String output = "";
         for (int j = 0; j < tiles.length; j++) {
