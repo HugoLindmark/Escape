@@ -44,7 +44,6 @@ public class Position {
             row = random.nextInt(10);
             position.setCol(col);
             position.setRow(row);
-
         }
 
         return position;
@@ -80,6 +79,5 @@ public class Position {
                 ", col=" + col +
                 '}';
     }
-
 
 }
