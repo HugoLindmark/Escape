@@ -35,13 +35,42 @@ public class Position {
         Random random = new Random();
         int col = random.nextInt(10);
         int row = random.nextInt(10);
-        return new Position(col, row);
+
+        Position position = new Position(col, row);
+        Position playerPosition = new Position(0, 0);
+
+        while (position.comparePosition(playerPosition)) {
+            col = random.nextInt(10);
+            row = random.nextInt(10);
+            position.setCol(col);
+            position.setRow(row);
+
+        }
+
+        return position;
+    }
+
+    public static Position randomizePosition(Position position) {
+        Random random = new Random();
+        int col = random.nextInt(10);
+        int row = random.nextInt(10);
+
+        Position randomizedPosition = new Position(col, row);
+        Position playerPosition = new Position(0, 0);
+
+        while (randomizedPosition.comparePosition(playerPosition) && randomizedPosition.comparePosition(position)) {
+            col = random.nextInt(10);
+            row = random.nextInt(10);
+            randomizedPosition.setCol(col);
+            randomizedPosition.setRow(row);
+
+        }
+
+        return randomizedPosition;
     }
 
     public boolean comparePosition(Position position){
-
         return this.col == position.col && this.row == position.row;
-
     }
 
     @Override
@@ -51,4 +80,6 @@ public class Position {
                 ", col=" + col +
                 '}';
     }
+
+
 }

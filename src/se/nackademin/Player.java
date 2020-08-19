@@ -48,13 +48,13 @@ public class Player {
 
     public void checkBoundaries(String input) {
         if (input.equals("S") && position.getRow() == 9) {
-            System.out.println("You can't go farther down, try another direction");
+            System.out.println("You can't go further down, try another direction");
         } else if (input.equals("W") && position.getRow() == 0) {
-            System.out.println("You can't go farther up, try another direction");
+            System.out.println("You can't go further up, try another direction");
         } else if (input.equals("D") && position.getCol() == 9) {
-            System.out.println("You can't go farther right, try another direction");
+            System.out.println("You can't go further right, try another direction");
         } else if (input.equals("A") && position.getCol() == 0) {
-            System.out.println("You can't go farther left, try another direction");
+            System.out.println("You can't go further left, try another direction");
         }
     }
 }
