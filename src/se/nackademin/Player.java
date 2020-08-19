@@ -27,19 +27,19 @@ public class Player {
     }
 
     public void movePlayer(String input) {
-        if (input.equals("S") && position.getRow() != 9) {
+        if (input.equalsIgnoreCase("S") && position.getRow() != 9) {
             int newRow = position.getRow();
             newRow++;
             position.setRow(newRow);
-        } else if (input.equals("W") && position.getRow() != 0) {
+        } else if (input.equalsIgnoreCase("W") && position.getRow() != 0) {
             int newRow = position.getRow();
             newRow--;
             position.setRow(newRow);
-        } else if (input.equals("D") && position.getCol() != 9) {
+        } else if (input.equalsIgnoreCase("D") && position.getCol() != 9) {
             int newCol = position.getCol();
             newCol++;
             position.setCol(newCol);
-        } else if (input.equals("A") && position.getCol() != 0) {
+        } else if (input.equalsIgnoreCase("A") && position.getCol() != 0) {
             int newCol = position.getCol();
             newCol--;
             position.setCol(newCol);
@@ -47,13 +47,13 @@ public class Player {
     }
 
     public void checkBoundaries(String input) {
-        if (input.equals("S") && position.getRow() == 9) {
+        if (input.equalsIgnoreCase("S") && position.getRow() == 9) {
             System.out.println("You can't go further down, try another direction");
-        } else if (input.equals("W") && position.getRow() == 0) {
+        } else if (input.equalsIgnoreCase("W") && position.getRow() == 0) {
             System.out.println("You can't go further up, try another direction");
-        } else if (input.equals("D") && position.getCol() == 9) {
+        } else if (input.equalsIgnoreCase("D") && position.getCol() == 9) {
             System.out.println("You can't go further right, try another direction");
-        } else if (input.equals("A") && position.getCol() == 0) {
+        } else if (input.equalsIgnoreCase("A") && position.getCol() == 0) {
             System.out.println("You can't go further left, try another direction");
         }
     }
