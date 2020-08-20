@@ -7,7 +7,7 @@ public class Player {
 
     public Player() {
         this.position = new Position(0, 0);
-        this.hasKey = true;
+        this.hasKey = false;
     }
 
     public boolean hasKey() {
